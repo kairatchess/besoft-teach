@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style type="text/css">
+	.div {
+		width:300px;
+		height:300px;
+		border:1px solid black;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-top-left-radius: 0;
+		transition:1s;
+	}
+</style>
+<body>
+	<div id="div" class="div"></div>
+		<script type="text/javascript">
+			let div = document.getElementById("div")
+			let body_ = document.body;
+
+			let a = 1;
+			let b = 1;
+			body_.onkeydown = (e) => {
+					if (e.keyCode == 39) {
+						a+=5
+						b+=5
+						div.style.borderTopRightRadius = `${a}px`
+						div.style.borderBottomRightRadius = `${b}px`
+					}
+					if (e.keyCode == 38) {
+						a+=5
+						b+=5
+						div.style.borderTopRightRadius = `${a}px`
+						div.style.borderTopLeftRadius = `${b}px`
+					}
+					if (e.keyCode == 37) {
+						a+=5
+						b+=5
+						div.style.borderTopLeftRadius = `${a}px`
+						div.style.borderBottomLeftRadius = `${b}px`
+					}
+					if (e.keyCode == 40) {
+						a+=5
+						b+=5
+						div.style.borderBottomLeftRadius = `${a}px`
+						div.style.borderBottomRightRadius = `${b}px`
+					}
+			}
+			body_.onkeyup = (e) => {
+				div.style.borderRadius = `${0}px`
+			}
+		</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		const q=("123")
+		let p =	10000
+		let a = +prompt("пин код жазыныз!")
+		
+		for(let n = true; n;){
+		if (a==q) { 
+			let w = +prompt("картада "+p+"сом бар")
+			if (p>=w) {
+				alert((((w*5/100)))+" "+"процентке кетти")
+				alert(w-(((w*5/100)))+"сом")
+				alert("картада"+" "+(p-w)+"сом"+" "+"калды")
+				p -= w
+			 n = confirm("дагы акча аласызбы")
+			}
+			else{
+				alert("сенде жок андай сом")
+			}
+		}
+		else if(a < q){
+			alert("туура эмес жаздын")
+			n = false
+		}
+		else{
+			alert("туура эмес")
+			n = false
+		}
+	}
+
+	</script>
+</body>
+</html>

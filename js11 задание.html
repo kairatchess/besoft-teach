@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// let text = ['kairat','aisada','dokturbek','мухаммед','adfaskfkdkssk']
+		// let c = text[0].length;
+		// let d = '';
+		// 	for(let a = 0; a < text.length; a++){
+		// 		// alert(c)
+		// 		if (text[a].length > c) {
+		// 			c = text[a].length
+		// 			d = text[a]
+		// 		}
+		// 	}
+		// alert(d)
+
+		// let text = ['dokturbek']
+		// 	for(let a = 0; a < text[0].length; a++){
+		// 		console.log(text[0][a])
+		// 	}
+	let a = +prompt("код")
+
+	let atm = [
+		{pin: "000000", price:90},
+		{pin: "111111", price:70},
+		{pin: "222222", price:50},
+		{pin: "333333", price:30},
+		{pin: "444444", price:10},
+	]
+	for(let b = 0; b < atm.length;b++){
+		if (atm[b].pin == a) {
+		 alert(atm[b].price)	
+		}
+	}
+	</script>
+</body>
+</html>

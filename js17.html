@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Island+Moments&family=Merienda:wght@700&family=Neonderthaw&family=Raleway:wght@100&family=The+Nautigal&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+	.fond{
+		color: black;
+		background-color: #D0C6DB;
+		padding:12px;
+		width:auto;
+		height: auto;
+		border:1px solid red;
+		border-color:grey;
+		font-size:40px;
+		border-radius:50px;
+		position:absolute;
+		bottom:75px;
+		left:100px;
+	}
+	.bg {
+		color: black;
+		background-color: #D0C6DB;
+		padding:12px;
+		width:auto;
+		height: auto;
+		border:1px solid red;
+		border-color:grey;
+		font-size:40px;
+		border-radius:50px;
+		position:absolute;
+		bottom:75px;
+		right:100px;
+	}
+	.text {
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		font-size:50px;
+	}
+</style>
+<body id="body">
+	<div id="fond" class="fond" ></div>
+	<div id="bg" class="bg" ></div>
+	<span id="text" class="text"></span>
+
+	<script type="text/javascript">
+		let prom = prompt("text")
+
+		let fond1 = 0;
+		let bg1 = 0;
+
+		const colors = ["blue","yellow","#DB493C","#3CDBDB","#3CDBDB","#C7DB34","#DB7B27","#15DB15","#DB0DDB","#22DBD8"]
+		const fonds = ["'Dongle', sans-serif","'Island Moments', cursive","'Merienda', cursive","'Neonderthaw', cursive","'Raleway', sans-serif","'The Nautigal', cursive"]
+
+		let fond = document.getElementById("fond");
+		let bg = document.getElementById("bg");
+		let text = document.getElementById("text");
+	     document.body.onkeypress = (e) =>{
+	     	if (e.keyCode == 13) {
+
+						bg1++	
+						bg.innerText = colors[bg1]
+						body.style.backgroundColor = colors[bg1];
+						if (bg1 > colors.length - 2) {
+							bg1 = 0
+						}
+					
+	     	}
+	     }
+		text.innerText = prom;
+
+		fond.onclick = function() {
+			fond1++
+			fond.innerText = fonds[fond1];		
+			text.style.fontFamily = fonds[fond1]
+			if (fond1 > fonds.length - 2) {
+				fond1 = 0
+			}		
+		}
+		// function asan(event){
+		// 	if (event.code == "Enter") { 
+		// 		bg.onclick = function() {
+		// 				bg1++	
+		// 				bg.innerText = colors[bg1]
+		// 				body.style.backgroundColor = colors[bg1];
+		// 				if (bg1 > colors.length - 2) {
+		// 					bg1 = 0
+		// 				}
+		// 			}		
+		// 		}
+		// 	}
+	</script>
+</body>
+</html>

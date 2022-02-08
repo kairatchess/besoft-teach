@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="text" id="input">
+	<button id="btn">ok</button>
+	<div id="div"></div>
+	<script type="text/javascript">
+		let input  = document.getElementById("input")
+		let btn = document.getElementById('btn')
+		let div = document.getElementById("div")
+
+			telefon = [
+				{
+					name : 'Samsung',
+					text : 'samsung text',
+					price : '30000',
+				},
+
+				{
+					name : 'Nokia',
+					text : 'nokia text',
+					price: '10000',
+				},
+				{
+					name : "Mi",
+					text : 'mi text',
+					price: "15000",
+				},
+			]
+		
+			input.oninput = (a) => {
+				let aa = 0;
+				div.innerHTML = ""
+			btn.onclick = function(){
+				telefon.map(r => {
+					aa = a.target.value.trim();
+
+					aa = aa.toLocaleUpperCase();
+
+					b = r.name.toLocaleUpperCase()
+
+					if( b.includes(aa) && aa.length > 0 ){
+						div.innerHTML += 
+										`<div>
+											<div>1: ${r.name} </div>
+											<div>2: ${r.text} </div>
+											<div>3: ${r.price} </div>
+										<div>`
+					}
+
+				})
+			}
+		}
+
+	</script>
+</body>
+</html>

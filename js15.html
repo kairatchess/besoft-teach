@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="text" id="input">
+	<button id="btn" >ok</button>
+
+	<div id="div">
+		
+	</div>
+	<script type="text/javascript">
+		let div = document.getElementById("div")
+		let input = document.getElementById("input")
+		let btn = document.getElementById("btn")
+		let text = ""
+
+		input.oninput = (evetn) => {
+			text = evetn.target.value
+		}
+		btn.onclick = () => {
+			div.innerText = text ;
+			input.value= " "
+		}
+
+
+	</script>
+</body>
+</html>

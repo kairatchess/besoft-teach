@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+	<style type="text/css">
+		.aaa{
+			position:absolute;
+			left:10px;
+			bottom:10px;
+		}
+		.aa{
+			position:absolute;
+			right:10px;
+			bottom:10px;
+
+		}
+		.bb{
+			border-radius:10px;
+			width:150px;
+			height:50px;
+			background-color:white;
+			font-size: 30px;
+			border-color: white;
+		}
+		.bb:hover {
+			background-color:yellow;
+			box-shadow:#DB330D 0px 0px 10px;
+		}
+	</style>
+<body id="b">
+	
+	<!-- <button onclick="asn(2022)">ок</button>
+	<div id="asan" align="center">
+		
+	</div>
+	<button onclick="asnn(2022)">ок</button>
+	<script type="text/javascript">
+		let ss = document.getElementById("asan")
+
+	function asn(d) {
+		ss.innerHTML = "hello onclick" + d 
+	}
+
+	function asnn(d) {
+	    ss.innerHTML = " " 
+	}
+	</script> -->
+	<button onclick="red()" class="aaa bb"> red </button>
+	<button onclick="redr()"class="aa bb"> blue </button>
+
+	 <script type="text/javascript">
+	 	let b = document.getElementById("b")
+	 	function red() {
+	 		b.style.backgroundColor = "red"
+	 	}
+
+	 	function redr() {
+	 		b.style.backgroundColor = "blue"
+	 	}
+	 	
+	 </script>
+</body>
+</html>

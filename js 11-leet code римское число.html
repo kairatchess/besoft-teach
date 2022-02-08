@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let p = "IX";
+
+		let nol = 0;
+
+		for(let i = 0; i < p.length; i++){
+			if ("I" == p[i]) {
+				nol += 1;           
+			}
+
+			if ("I"== p[i] && "V" == p[i + 1] || "I"== p[i] && "X" == p[i + 1]||"I"== p[i] && "L" == p[i + 1]||"I"== p[i] && "C" == p[i + 1]||"I"== p[i] && "D" == p[i + 1]||"I"== p[i] && "M" == p[i + 1]){
+				nol += -2;
+			}
+
+			if ("V" == p[i]) {
+				nol += 5;           
+			}
+
+			if ("V"== p[i] && "X" == p[i + 1] || "V"== p[i] && "L" == p[i + 1]||"V"== p[i] && "C" == p[i + 1]||"V"== p[i] && "D" == p[i + 1]||"V"== p[i] && "M" == p[i + 1]){
+				nol += -10;
+			}
+
+			if ( "X" == p[i]){
+				nol += 10;
+			}
+
+			if ("X"== p[i] && "L" == p[i + 1]||"X"== p[i] && "C" == p[i + 1]||"X"== p[i] && "D" == p[i + 1]||"X"== p[i] && "M" == p[i + 1]){
+				nol += -20;
+			}
+			
+			if ( "L" == p[i]){
+				nol += 50;
+			}
+
+			if ("L"== p[i] && "C" == p[i + 1] ||"L"== p[i] && "D" == p[i + 1]||"L"== p[i] && "M" == p[i + 1]){
+				nol += -100;
+			}
+
+			if ( "C" == p[i]){
+				nol += 100;
+			}
+
+			if ("C"== p[i] && "D" == p[i + 1]||"C"== p[i] && "M" == p[i + 1]){
+				nol += -200;
+			}
+
+			if ( "D" == p[i]){
+				nol += 500;
+			}
+
+			if ("D"== p[i] && "M" == p[i + 1]){
+				nol += -1000;
+			}
+
+			if ( "M" == p[i]){
+				nol += 1000;
+			}
+			
+		}
+		alert(nol)
+	</script>
+</body>
+</html>

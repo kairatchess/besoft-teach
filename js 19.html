@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+	<style type="text/css">
+		.a{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+	</style>
+<body>
+	<div style="display:flex;"> 
+		<input type="text" id="input">
+		<button style="margin-left:20px;" id="button">ок</button>
+	</div>
+	<div class="a" id="div"></div>
+	<script type="text/javascript">
+		let a = 0;
+
+		let input = document.getElementById("input")
+		let button = document.getElementById("button") 
+		let ss  = ["dsfdsf"]
+
+			input.oninput = function(event) {
+				 a = event.target.value;
+			}
+
+				button.onclick = function()	{
+						// ss.push  = a;
+						// console.log(ss);
+					input.value = " ";
+				}
+
+				ss.map((e, i) => {
+					div.innerHTML += `<div> ${i} ${e}</div>`
+					console.log(ss)
+				})
+			
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title></title>
+</head>
+
+<body>
+  <button onclick="add()">Add new item</button>
+
+ <div id="div" >
+
+ </div>
+
+ <script type="text/javascript">
+
+ let div = document.getElementById('div')
+ 
+ let a = 1;
+
+
+   function add() {
+    div.innerHTML += `<ul><li>item${a++}</li></ul>`
+  }
+
+ </script>
+</body>
+</html>

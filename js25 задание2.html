@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style type="text/css">
+	.a{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+</style>
+<body>
+	<div class="a" id="div"> 
+			<span id="h">H</span>
+			<span id="e">e</span>
+			<span id="l">l</span>
+			<span id="l1">l</span>
+			<span id="o">o</span>
+	</div>
+		<script type="text/javascript">
+			let div = document.getElementById("div")
+			let body_ = document.body;
+			let h = document.getElementById("h")
+			let e = document.getElementById("e")
+			let l = document.getElementById("l")
+			let l1 = document.getElementById("l1")
+			let o = document.getElementById("o")
+
+			body_.onkeydown = (q) => {
+				if (q.keyCode == 72) {
+					h.style.color = "green"	
+				}
+				 else if (q.keyCode == 72){
+					h.style.color = "red"		
+					}
+				if (q.keyCode == 69) {
+					e.style.color = "green"	
+				}
+				if (q.keyCode == 76) {
+					l.style.color = "green"	
+				}
+				if (q.keyCode == 76) {
+					l1.style.color = "green"	
+				}
+				if (q.keyCode == 79) {
+					o.style.color = "green"	
+				}
+				
+			}
+		</script>
+</body>
+</html>

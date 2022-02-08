@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div>TODO LIST</div>
+  <input type="text" id="input" class="input">
+  <button id="btn" class="btn">Sabmit</button>
+  <button id="btn1">clear</button>
+  <div id="div2" class="div">
+
+  <ul id="ul"></ul>
+  </div>
+  <script >
+    let div = document.getElementById('div')
+    let ul = document.getElementById('ul')
+    let btn1 = document.getElementById("btn1")
+
+    let input = document.getElementById('input')
+    let btn = document.getElementById('btn')
+    let div2 =document.getElementById('div2')
+    let ss = []
+
+
+    input.oninput = function(e){
+      let a = e.target.value 
+      btn.onclick = function(){
+        console.log(ss)
+        ss.push(a)
+        input.value=''
+        let ff = JSON.stringify(ss)
+        localStorage.setItem('list',ff)
+        asan()
+      }
+    }
+    function asan(){
+        ss = localStorage.getItem('list')
+       ss = ss != null ? JSON.parse(ss) : []
+       div2.innerHTML = ''
+      ss.map((e, i)=>{
+        console.log(i)
+         div2.innerHTML += `<div>${i+1}. ${e} <button onclick="close_(${i})">X</button> </div>`
+       })
+    }
+
+     function close_(i){
+       ss.splice(i, 1)
+      
+        let ff = JSON.stringify(ss)
+        localStorage.setItem('list',ff)
+
+        asan()
+        console.log(ss)
+     }  
+
+
+    btn1.onclick = () => {
+      mySet.clear('list');
+      div2.innerHTML = ''
+    } 
+      asan()
+  </script>
+</body>
+</html>

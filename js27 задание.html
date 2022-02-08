@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="text" id="input">
+	<button id="btn">ok</button>
+	<div id="div">
+		<ul> </ul>
+	</div>
+	<script type="text/javascript">
+
+	 let input = document.getElementById("input")
+	 let btn = document.getElementById("btn")
+	 let div = document.getElementById("div")
+	 let a = '';
+	 let s = [];
+
+	 	input.oninput = (e) => {
+	 		 a = e.target.value			
+		}
+
+	btn.onclick = () => {
+	 		s.push(a)
+	 		let ss = JSON.stringify(s)
+	 		localStorage.setItem("list", ss) 		
+	 	let d = (JSON.parse(localStorage.getItem("list")))
+	 		s.map (e =>{
+	 			div.innerHTML = ''
+	 			div.innerHTML =	`<li> ${d} </li>`
+	 			input.value = ''
+			})
+	 	}
+	
+	</script>
+</body>
+</html>

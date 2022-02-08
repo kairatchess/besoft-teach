@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div id=kairat>
+		
+	</div>
+	<script type="text/javascript">
+		
+
+
+	 	let a = "hello DOM"
+	let d = document.getElementById('kairat')
+
+		for(let i =0; i < 6; i++){
+	 	if (i % 2 == 0) {
+	 		d.innerHTML += `<h${i+1} style="color:red ">${a}</h${i+1}>`
+			d.innerHTML += `<span style="color: red">${a[6]}${a[7]}${a[8]}</span>`
+		}
+		else{
+			d.innerHTML += `<h${i+1} style="color:blue">${a}</h${i+1}>`
+			d.innerHTML +=	`<span style="color: blue">${a[6]}${a[7]}${a[8]}</span>`
+		
+		}
+		}
+	// 	 for(let i =0; i < a.length; i++){
+	// 	 	if (i % 2 == 0) {
+	// d.innerHTML += `<span style="color: red">${a[6]}${a[7]}${a[8]}</span>`
+	// 	}
+	// 	else{
+	// 		d.innerHTML +=	`<span style="color: blue">${a[6]}${a[7]}${a[8]}</span>`
+		
+	// 	}
+	
+	 
+	</script>
+</body>
+</html>

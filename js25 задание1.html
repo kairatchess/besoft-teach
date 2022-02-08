@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div id="div">
+		
+	</div>
+		<script type="text/javascript">
+			let div = document.getElementById("div")
+			let body_ = document.body;
+			let x = document.getElementsByTagName("span")
+			console.log(x)
+			let c = "kairat";
+			for(let i = 0 ; i < c.length; i++){
+				div.innerHTML += `<span>${c[i]}</span>`
+			}
+			let a0 = 0;
+			
+			body_.onkeydown = (e) => {
+				let w = c[a0].toLocaleUpperCase()
+				let r = e.key.toLocaleUpperCase()
+				console.log(r, w,a0)
+					if (r == w) {
+						x[a0].style.color = "green"
+					}
+					else{
+						x[a0].style.color = "red"
+					}
+					a0++
+			}
+		</script>
+</body>
+</html>

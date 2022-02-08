@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="text" id="input">
+	<button id="btn">ok</button>
+	<script type="text/javascript">
+	 // 	localStorage.setItem("kairat", "0771")	
+	 // console.log(localStorage.getItem("kairat"))
+	 // localStorage.removeItem("kairat")
+
+	 // let input = document.getElementById("input")
+	 // let btn = document.getElementById("btn")
+	 let a = 0;
+	 	input.oninput = (e) => {
+	 		let a = e.target.value	
+	 	btn.onclick = () => {
+	 		localStorage.setItem(a ,'')
+	 }
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style type="text/css">
+	.togolok{
+		width:100px;
+		height:100px;
+		border-radius:100%;
+		border:3px solid blue;
+	}
+	.kvad{
+		width:100px;
+		height:100px;
+		border:3px solid red;
+	}
+</style>
+<body id="b">
+	<div id="tg"></div>
+	<div id="kv"></div>
+	<script type="text/javascript">	
+		let pr = prompt("сан?")
+		let tg = document.getElementById("tg")
+		let kv = document.getElementById("kv")
+
+			for (let i = 0; i < pr.length ; i++) {
+				if (pr % 2 == 0) {
+
+				tg.innerHTML +=	`<span
+					style ='width: 100px;
+							height: 100px;
+							border:3px solid blue;
+							border-radius:100%;
+							'>${pr[i]}
+					</span>`
+				}
+				else{
+					kv.innerHTML +=	`<span
+					style ='width: 100px;
+							height: 100px;
+							border:3px solid blue;
+							border-radius:100%;
+							>${pr[i]}'
+					</span>`
+				}
+			}
+	</script>
+</body>
+</html>

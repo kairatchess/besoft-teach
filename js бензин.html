@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+		<script type="text/javascript">
+			let t = +prompt("тонна")
+			let v = +prompt("1камаз")
+			let c = +prompt("2камаз")
+		
+		const c1 = (t - (t % v)) / v;
+		t -= c1 * v;
+		const v1 = (t - (t % c)) / c;
+		t -= v1 * c;
+		const q1 = (t - (t % 1)) / 1;
+		t -= q1 * 1;
+
+		alert("1 камаз:"+c1);		
+		alert("2 камаз:"+v1);			
+		alert("3 камаз:"+q1);
+		</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+
+	<style type="text/css">	
+		/*.a1{
+			width:300px;
+			height:400px;
+			position: absolute;
+			top: 50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			border:1px solid black;
+		}
+		.b1 {
+			width:30px;
+			height:30px;
+			position: absolute;
+			bottom:1px;
+			left: 1px;
+			margin-top:-10px;
+			border:1px black solid;
+			padding:20px;
+		}*/
+		.body{
+			display: flex;
+		}
+		.s1{
+			border-radius:20px;
+			margin-left:20px;
+			width:auto;
+			height: auto;
+			padding:10px;
+			border:1px black solid;
+		}
+
+		.a1{
+			height:50px;
+			border-radius:10px;
+			border:1px black solid;
+		}
+	</style>
+</head>
+<body class="body">
+		<input type="text" class="a1" id="input">
+		<div class="s1" id="plus">
+			+
+		</div>
+		<div class="s1" id="muns">
+			-
+		</div>
+		<div class="s1" id="rav">
+			=
+		</div>
+		<div  id = "div ">
+			
+		</div>
+	<script type="text/javascript">
+		let pl = null;
+		let b = 0;
+		let c = 0;
+
+		let input1 = 0;
+		let input2 = 0;
+
+		let plus = document.getElementById("plus")
+		let muns = document.getElementById("muns")
+		let rav = document.getElementById("rav")
+		let input = document.getElementById("input")
+		let div = document.getElementById("div")
+
+			input.oninput = function(event) {
+				if (pl!== null) {
+				 	input2 = event.target.value;
+				 }
+				 else{
+				 	input1 = event.target.value; 
+				 }
+
+			}
+
+			plus.onclick = function () {
+				pl = false;
+				input.value = " ";
+			}
+			 
+		    muns.onclick = function () {
+		    	pl = true;
+				input.value = " ";
+			}
+let dd = null;
+			rav.onclick = function () {
+				if (pl) {
+					dd = +input1 - +input2
+					input1 = 0;
+					input2 = 0;
+				}
+				else{
+					dd = +input1 + +input2
+					input1 = 0;
+					input2 = 0;
+				}
+				input.value = dd
+			}
+
+	</script>
+</body>
+</html>

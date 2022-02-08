@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let a1= +prompt("a1")
+		let b2= +prompt("b2")
+		let c3= +prompt("c3")
+
+		if (a1 >= 15 && b2 >= 15) {
+			a1 -= 15;
+		}
+		else if (a1 >= 15 && b2 < 15 || a1 < 15 && b2 < 15 && a1 >= b2) {
+			a1 -= b2;
+		}
+		else if (a1 < 15 && b2 >= 15 || a1 < 15 && b2 < 15 && a1 < b2) {
+			a1 = 0;
+		}
+
+
+		if (b2 >= 10 && c3 >= 10) {
+			b2 -= 10;
+		}
+		else if (b2 >= 10 && c3 < 10 ||b2 < 10 && b2 < 10 && b2 >= c3) {
+			b2 -= c3;
+		}
+		else if (b2 < 10 && c3 >= 10 ||b2 < 10 && c3 < 10 && b2 < c3) {
+			b2 = 0;
+		}
+
+
+		alert(a1 + b2 + c3);
+	</script>
+</body>
+</html>

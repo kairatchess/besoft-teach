@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body id="b">
+	<!-- <div> 
+		<button id="btn">Скрыть</button>
+		<div style="color:blue;"id="img">
+			<img src="https://klike.net/uploads/posts/2021-04/1618815701_51.jpg">
+		</div>
+	</div>
+	<script type="text/javascript">
+		let img = document.getElementById("img");
+		let btn = document.getElementById("btn")
+		v = true;
+
+			btn.onclick = function() {
+				v = !v;
+				if (v) {
+					img.style.display = "block";
+					btn.innerText = "скрыть";
+				}else{
+					btn.innerHTML = "Показать";
+					img.style.display = "none";
+				}
+			};
+	</script> -->
+	<div align="center" >
+		<button id="aa" style="background-color:white;width:100px;height:50px;border-radius: 15px;box-shadow:green 0px 0px 20px;">кызыл</button>
+	</div>
+	<script type="text/javascript">		
+		let aa = document.getElementById("aa")
+		let b = document.getElementById("b")
+		v = true;
+
+			aa.onclick = function() {
+				let a = prompt("")
+				v = !v;
+			    if (a == "кызыл") {
+					aa.innerText = "кызыл"
+	 				b.style.backgroundColor = "red"
+	 				aa.style.backgroundColor = "red"
+				}
+			 	else if ( a == "кок") {
+					aa.innerText = "кок"
+	 				b.style.backgroundColor = "blue"
+	 				aa.style.backgroundColor = "blue"
+				}
+				else {
+	 				b.style.backgroundColor = "a"
+	 				aa.innerText = "кок"
+	 				aa.style.backgroundColor = "blue"
+				}
+			}
+
+	</script>
+</body>
+</html>

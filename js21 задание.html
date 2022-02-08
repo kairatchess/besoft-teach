@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+
+<body>
+ <input id="input" />
+ <button onclick="add()">ok</button>
+ <div id="div" style="font-size: 40px;"></div>
+ <script>
+		  let div = document.getElementById('div');
+		  let input = document.getElementById('input')
+		  let name = ['Kairat', 'Bekbolsun', 'Farid', 'Ali', 'Tazagul']
+
+		  function add_(){
+		   name.sort().map((v) => {
+		    div.innerHTML += `<div>${v}</div>`
+		   })
+		  }
+		  add_();
+		  function add() {
+		   let push_ = false;
+		   let len = name.length;
+		   let in_ = input.value
+		    input.value = ''
+		    div.innerHTML = ''
+		   name.map((v, i) => {
+		    if (in_[0] == v[0]) {
+		     name.splice(i, 1, in_)
+		     push_ = true;
+		    }
+		   })
+		   if (!push_) {
+		    name.splice(len, 1, in_)
+		   }
+		   add_()
+		  }
+
+		</script>
+	</body>
+</html>
